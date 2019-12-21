@@ -3,65 +3,65 @@ package(default_visibility = ["//visibility:public"])
 filegroup(
     name = "gcc",
     srcs = [
-        "bin/arm-linux-gnueabihf-gcc",
+        "bin/aarch64-linux-gnu-gcc",
     ],
 )
 
 filegroup(
     name = "ar",
     srcs = [
-        "bin/arm-linux-gnueabihf-ar",
+        "bin/aarch64-linux-gnu-ar",
     ],
 )
 
 filegroup(
     name = "ld",
     srcs = [
-        "bin/arm-linux-gnueabihf-ld",
+        "bin/aarch64-linux-gnu-ld",
     ],
 )
 
 filegroup(
     name = "nm",
     srcs = [
-        "bin/arm-linux-gnueabihf-nm",
+        "bin/aarch64-linux-gnu-nm",
     ],
 )
 
 filegroup(
     name = "objcopy",
     srcs = [
-        "bin/arm-linux-gnueabihf-objcopy",
+        "bin/aarch64-linux-gnu-objcopy",
     ],
 )
 
 filegroup(
     name = "objdump",
     srcs = [
-        "bin/arm-linux-gnueabihf-objdump",
+        "bin/aarch64-linux-gnu-objdump",
     ],
 )
 
 filegroup(
     name = "strip",
     srcs = [
-        "bin/arm-linux-gnueabihf-strip",
+        "bin/aarch64-linux-gnu-strip",
     ],
 )
 
 filegroup(
     name = "as",
     srcs = [
-        "bin/arm-linux-gnueabihf-as",
+        "bin/aarch64-linux-gnu-as",
     ],
 )
 
 filegroup(
     name = "compiler_pieces",
     srcs = glob([
-        "arm-linux-gnueabihf/**",
+        "aarch64-linux-gnu/**",
         "libexec/**",
-        "lib/gcc/arm-linux-gnueabihf/**",
+        "lib/gcc/aarch64-linux-gnu/**",
         "include/**",
     ]),
 )

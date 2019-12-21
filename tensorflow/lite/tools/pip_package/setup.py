@@ -46,8 +46,8 @@ TARGET = (
     os.environ['TENSORFLOW_TARGET'] if 'TENSORFLOW_TARGET' in os.environ
     else None)
 if TARGET == 'rpi':
-  os.environ['CXX'] = 'arm-linux-gnueabihf-g++'
-  os.environ['CC'] = 'arm-linux-gnueabihf-g++'
+  os.environ['CXX'] = 'aarch64-linux-gnu-g++'
+  os.environ['CC'] = 'aarch64-linux-gnu-g++'
 MAKE_CROSS_OPTIONS = ['TARGET=%s' % TARGET]  if TARGET else []
 
 RELATIVE_MAKE_DIR = os.path.join('tensorflow', 'lite', 'tools', 'make')

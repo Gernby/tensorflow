@@ -61,7 +61,7 @@ curl -L https://github.com/raspberrypi/tools/archive/0e906ebc527eab1cdbf7adabff5
 tar xzf toolchain.tar.gz
 mv tools-0e906ebc527eab1cdbf7adabff5b474da9562e9f/ tools
 
-CROSSTOOL_CC=${TOOLCHAIN_INSTALL_PATH}/tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
+CROSSTOOL_CC=${TOOLCHAIN_INSTALL_PATH}/tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/aarch64-linux-gnu-gcc
 
 OPENBLAS_SRC_PATH=/tmp/openblas_src/
 sudo rm -rf ${OPENBLAS_SRC_PATH}
@@ -87,7 +87,7 @@ if [[ $1 == "PI_ONE" ]]; then
   echo "Building for the Pi One/Zero, with no NEON support"
   WHEEL_ARCH=linux_armv6l
 else
-  PI_COPTS='--copt=-march=armv7-a --copt=-mfpu=neon-vfpv4
+  PI_COPTS='--copt=-march=armv8-a --copt=-mfpu=neon-vfpv4
   --copt=-std=gnu11 --copt=-DS_IREAD=S_IRUSR --copt=-DS_IWRITE=S_IWUSR
   --copt=-O3 --copt=-fno-tree-pre
   --copt=-U__GCC_HAVE_SYNC_COMPARE_AND_SWAP_1

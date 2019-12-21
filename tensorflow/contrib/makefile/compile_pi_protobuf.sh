@@ -21,7 +21,7 @@ GENDIR=$(pwd)/gen/protobuf_pi/
 LIBDIR=${GENDIR}
 mkdir -p ${LIBDIR}
 
-CXX=arm-linux-gnueabihf-g++
+CXX=aarch64-linux-gnu-g++
 
 cd downloads/protobuf || exit 1
 

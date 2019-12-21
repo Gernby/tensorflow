@@ -20,11 +20,11 @@ default_toolchain {
 }
 
 toolchain {
-  abi_version: "armeabi"
-  abi_libc_version: "armeabi"
+  abi_version: "aarch64"
+  abi_libc_version: "aarch64"
   builtin_sysroot: ""
   compiler: "compiler"
-  host_system_name: "armeabi"
+  host_system_name: "aarch64"
   needsPic: true
   supports_gold_linker: false
   supports_incremental_linker: false
@@ -32,29 +32,29 @@ toolchain {
   supports_interface_shared_objects: false
   supports_normalizing_ar: false
   supports_start_end_lib: false
-  target_libc: "armeabi"
-  target_cpu: "armeabi"
-  target_system_name: "armeabi"
-  toolchain_identifier: "arm-linux-gnueabihf"
+  target_libc: "aarch64"
+  target_cpu: "aarch64"
+  target_system_name: "aarch64"
+  toolchain_identifier: "aarch64-linux-gnu"
 
-  tool_path { name: "ar" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-ar" }
+  tool_path { name: "ar" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-ar" }
   tool_path { name: "compat-ld" path: "/bin/false" }
-  tool_path { name: "cpp" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-cpp" }
-  tool_path { name: "dwp" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-dwp" }
-  tool_path { name: "gcc" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-gcc" }
-  tool_path { name: "gcov" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-gcov" }
-  tool_path { name: "ld" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-ld" }
+  tool_path { name: "cpp" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-cpp" }
+  tool_path { name: "dwp" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-dwp" }
+  tool_path { name: "gcc" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-gcc" }
+  tool_path { name: "gcov" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-gcov" }
+  tool_path { name: "ld" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-ld" }
 
-  tool_path { name: "nm" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-nm" }
-  tool_path { name: "objcopy" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-objcopy" }
-  tool_path { name: "objdump" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-objdump" }
-  tool_path { name: "strip" path: "%{ARM_COMPILER_PATH}%/bin/arm-linux-gnueabihf-strip" }
+  tool_path { name: "nm" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-nm" }
+  tool_path { name: "objcopy" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-objcopy" }
+  tool_path { name: "objdump" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-objdump" }
+  tool_path { name: "strip" path: "%{ARM_COMPILER_PATH}%/bin/aarch64-linux-gnu-strip" }
 
-  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/arm-linux-gnueabihf/include/c++/4.9.3/"
-  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/arm-linux-gnueabihf/sysroot/usr/include/"
-  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/arm-linux-gnueabihf/libc/usr/include/"
-  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/lib/gcc/arm-linux-gnueabihf/4.9.3/include"
-  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/lib/gcc/arm-linux-gnueabihf/4.9.3/include-fixed"
+  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/aarch64-linux-gnu/include/c++/4.9.3/"
+  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/aarch64-linux-gnu/sysroot/usr/include/"
+  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/aarch64-linux-gnu/libc/usr/include/"
+  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/lib/gcc/aarch64-linux-gnu/4.9.3/include"
+  cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/lib/gcc/aarch64-linux-gnu/4.9.3/include-fixed"
   cxx_builtin_include_directory: "%{ARM_COMPILER_PATH}%/local_include"
   cxx_builtin_include_directory: "/usr/include"
   # The path below must match the one used in
@@ -65,7 +65,7 @@ toolchain {
   # explicitly set them as flags. There's a query to the Bazel team outstanding about
   # why this is necessary.
   cxx_flag: "-isystem"
-  cxx_flag: "/usr/include/arm-linux-gnueabihf"
+  cxx_flag: "/usr/include/aarch64-linux-gnu"
   cxx_flag: "-isystem"
   cxx_flag: "%{PYTHON_INCLUDE_PATH}%"
   cxx_flag: "-isystem"

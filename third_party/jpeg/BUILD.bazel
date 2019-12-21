@@ -29,7 +29,7 @@ libjpegturbo_copts = select({
 }) + select({
     ":armeabi-v7a": [
         "-D__ARM_NEON__",
-        "-march=armv7-a",
+        "-march=armv8-a",
         "-mfloat-abi=softfp",
         "-fprefetch-loop-arrays",
     ],

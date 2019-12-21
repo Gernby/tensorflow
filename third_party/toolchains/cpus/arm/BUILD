@@ -12,6 +12,7 @@ cc_toolchain_suite(
         "armeabi": ":cc-compiler-armeabi",
         "k8": ":cc-compiler-local",
         "piii": ":cc-compiler-local",
+        "aarch64": ":cc-compiler-local",
         "arm": ":cc-compiler-local",
         "s390x": ":cc-compiler-local",
     },
@@ -52,5 +53,5 @@ cc_toolchain(
     objcopy_files = "arm_linux_all_files",
     strip_files = "arm_linux_all_files",
     supports_param_files = 1,
-    toolchain_identifier = "arm-linux-gnueabihf",
+    toolchain_identifier = "aarch64-linux-gnu",
 )

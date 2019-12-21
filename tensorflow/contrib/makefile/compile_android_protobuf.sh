@@ -107,12 +107,12 @@ elif [[ ${ARCHITECTURE} == "armeabi-v7a" ]]; then
     toolchain="arm-linux-androideabi-4.9"
     sysroot_arch="arm"
     bin_prefix="arm-linux-androideabi"
-    march_option="-march=armv7-a"
+    march_option="-march=armv8-a"
 elif [[ ${ARCHITECTURE} == "armeabi-v7a-hard" ]]; then
     toolchain="arm-linux-androideabi-4.9"
     sysroot_arch="arm"
     bin_prefix="arm-linux-androideabi"
-    march_option="-march=armv7-a"
+    march_option="-march=armv8-a"
 elif [[ ${ARCHITECTURE} == "mips" ]]; then
     toolchain="mipsel-linux-android-4.9"
     sysroot_arch="mips"

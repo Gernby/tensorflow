@@ -215,12 +215,12 @@ for arch in $archs; do
                 armeabi-v7a)            toolchain="arm-linux-androideabi-4.9"
                                         sysroot_arch="arm"
                                         bin_prefix="arm-linux-androideabi"
-                                        march_option="-march=armv7-a -mfloat-abi=softfp -mfpu=neon"
+                                        march_option="-march=armv8-a -mfloat-abi=softfp -mfpu=neon"
                                         ;;
                 armeabi-v7a-hard)       toolchain="arm-linux-androideabi-4.9"
                                         sysroot_arch="arm"
                                         bin_prefix="arm-linux-androideabi"
-                                        march_option="-march=armv7-a -mfpu=neon"
+                                        march_option="-march=armv8-a -mfpu=neon"
                                         ;;
                 mips)                   toolchain="mipsel-linux-android-4.9"
                                         sysroot_arch="mips"
